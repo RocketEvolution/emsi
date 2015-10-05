@@ -1,0 +1,59 @@
+// VARIABLES
+$blue: #2b6fff;
+$lightblue: #6b9aff;
+$lighterblue: #4ec3ff;
+$lightestblue: #81d7ee;
+$darkblue: #005996;
+$darkerblue: #0d314a;
+$darkestblue: #0a1f2d;
+$green: #00ff18;
+$lightgreen: #38ff4b;
+$lightergreen: #6cff7a;
+$lightestgreen: #9bffa5;
+$darkgreen: #18cf00;
+$darkergreen: #14a600;
+$darkestgreen: #0b5c00;
+$gray: #777;
+$lightgray: #999;
+$lightergray: #AAA;
+$lightestgray: #EEE;
+$darkgray: #555;
+$darkergray: #333;
+$darkestgray: #111;
+
+
+
+// PLACEHOLDERS
+%nospace {
+	padding: 0px;
+	margin: 0px;
+}
+
+
+
+// MIXINS
+@mixin clearspace() {
+	padding: 0px;
+	margin: 0px;
+}
+@mixin transition($duration: 300ms) {
+	transition: all $duration ease;
+	-o-transition: all $duration ease;
+	-ms-transition: all $duration ease;
+	-moz-transition: all $duration ease;
+	-webkit-transition: all $duration ease;
+}
+@mixin round($radius: 10px) {
+	border-radius: $radius;
+	-o-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+}
+@mixin shadow($depth: 5px) {
+	box-shadow: 0 0 $depth 1px rgba(#000, 0.5);
+	-o-box-shadow: 0 0 $depth 1px rgba(#000, 0.5);
+	-ms-box-shadow: 0 0 $depth 1px rgba(#000, 0.5);
+	-moz-box-shadow: 0 0 $depth 1px rgba(#000, 0.5);
+	-webkit-box-shadow: 0 0 $depth 1px rgba(#000, 0.5);
+}
