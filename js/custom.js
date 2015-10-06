@@ -30,7 +30,7 @@ $(document).ready(function() {
 		$('#slideshow-text').removeClass('show');
 	} 
 	function onAfter() { 
-	    $('#slideshow-text').html('<h2>' + this.title + '</h2>' + '<hr />' + '<h5>' + this.alt + '</h5>' +
+	    $('#slideshow-text').html('<h2 class="lineheight-default">' + this.title + '</h2>' + '<hr />' + '<h5 class="lineheight-default">' + this.alt + '</h5>' +
 	    							'<br /><a href="#" class="btn btn-danger btn-lg">LET\'S START WORKING</a>');
 	    $('#slideshow-text').addClass('show');
 	}
@@ -44,6 +44,28 @@ $(document).ready(function() {
 		width: '100%',
 		fit: 1
 	    //delay: -1000 
+	});
+
+
+	// BACK TO TOP
+	$('#backtop').click(function() {
+		$('html, body').animate({'scrollTop': '0px'}, 1200);
+		return false;
+	});
+
+
+	// GOOGLE MAP
+	jQuery(function($){
+		$('#map_canvas').gmap3({
+			marker:{ address: '14.633005,121.037622' },
+			map:{
+				options: {
+					zoom: 16,
+					scrollwheel: false,
+					streetViewControl : true
+				}
+			}
+		});
 	});
 
 
