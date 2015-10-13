@@ -11,8 +11,10 @@ $(document).ready(function() {
 
 	// MENU -> SUBMENU
 	$('#navigation #submenu').hover(function() {
+		$(this).addClass('submenuhover');
 		$('#topmenu-dropdown').addClass('show');
 		$('#topmenu-dropdown .close-trigger').mouseover(function() {
+			$('#navigation #submenu').removeClass('submenuhover');
 			$('#topmenu-dropdown').removeClass('show');
 		});
 	});
